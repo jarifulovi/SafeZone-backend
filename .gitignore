@@ -25,7 +25,7 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
+PIPFILE.lock
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -128,113 +128,52 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# FastAPI specific
-.env.local
-.env.development
-.env.test
-.env.production
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-database.db
-
-# ML Model files
+# ML model files and data
 *.pkl
-*.pickle
 *.joblib
 *.h5
 *.hdf5
-*.ckpt
-*.pth
-*.pt
-*.bin
+*.pb
 *.onnx
 *.tflite
-*.pb
-*.safetensors
+models/saved_models/
+models/checkpoints/
+models/logs/
 
-# Model directories
-models/
-checkpoints/
-weights/
-saved_models/
-model_artifacts/
-
-# Data files
-data/
-datasets/
-*.csv
-*.json
-*.parquet
-*.feather
-*.xlsx
-*.xls
-
-# Large files and media
-*.zip
-*.tar.gz
-*.rar
-*.7z
-*.mp4
-*.mp3
-*.wav
-*.avi
-*.mov
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-*.pdf
-
-# Logs and temp files
+# TensorFlow/Keras
+*.keras
 logs/
-temp/
-tmp/
-*.tmp
+tensorboard_logs/
 
-# IDE and Editor files
+# PyTorch
+*.pth
+*.pt
+
+# Scikit-learn
+*.joblib
+
+# Data files (if sensitive)
+data/raw/
+data/processed/
+data/*.csv
+data/*.tsv
+data/*.json
+data/*.parquet
+
+# Generated severity data cache
+data/severity_data.*
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# OS
 .DS_Store
 Thumbs.db
 
-# OS specific
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-
-# Hugging Face cache
-.cache/
-transformers_cache/
-huggingface_hub/
-
-# MLflow
-mlruns/
-mlartifacts/
-
-# Weights & Biases
-wandb/
-
-# TensorBoard logs
-runs/
-tb_logs/
-
-# Configuration files with secrets
-config.ini
-secrets.json
-.secrets
-api_keys.txt
-
-# Upload directories
-uploads/
-static/uploads/
-media/uploads/
+# Temporary files
+*.tmp
+*.temp
